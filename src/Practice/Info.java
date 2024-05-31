@@ -1,7 +1,5 @@
 package Practice;
 
-import java.util.Random;
-
 public class Info {
 	private String date;
 	private String phone;
