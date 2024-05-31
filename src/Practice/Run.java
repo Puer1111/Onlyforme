@@ -54,6 +54,7 @@ public class Run {
 			case 3:
 				Info[] infos = msg.getAllenquires();
 				msg.printAllenquires(infos);
+				break;
 			case 4:	
 				view.printMessage("종료 되었습니다");
 				break end;
