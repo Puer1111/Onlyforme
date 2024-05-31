@@ -11,6 +11,7 @@ public class View {
 		String Memberid = sc.next();
 		System.out.println("PW: ");
 		String Memberpw = sc.next();
+		
 		Info info = new Info();
 		info.setMemberid(Memberid);
 		info.setMemberpw(Memberpw);
@@ -19,10 +20,11 @@ public class View {
 	
 	public int menu() {
 
-		System.out.println("메뉴 선택");
+		System.out.println("====메뉴 선택====");
 		System.out.println("1. 문의 관련");
 		System.out.println("2. 원격 제어");
-		System.out.println("3. 종료");
+		System.out.println("3. 문의 조회");
+		System.out.println("4. 종료");
 
 		System.out.println("메뉴 선택(1~3): ");
 		int select = sc.nextInt();
@@ -53,10 +55,10 @@ public class View {
 		System.out.print("이메일 입력: ");
 		String MemberEmail = sc.next();
 	
-		Info info1 = new Info();
-		info1.setMembercard(Membercard);
-		info1.setMemberEmail(MemberEmail);
-		return info1;
+		Info info = new Info();
+		info.setMembercard(Membercard);
+		info.setMemberEmail(MemberEmail);
+		return info;
 	}
 	public void purchase2() {
 		System.out.println("호환성 추가 및 새로고침 진행 권장");
@@ -93,12 +95,15 @@ public class View {
 		System.out.println("이메일 입력: ");
 		String MemberEmail = sc.next();
 		
-		Info info2 = new Info();
-		info2.setDate(date);
-		info2.setMemberEmail(MemberEmail);
-		return info2;
+		Info info = new Info();
+		info.setDate(date);
+		info.setMemberEmail(MemberEmail);
+		return info;
 	}
+	
 	public void printMessage(String msg) {
 		System.out.println(msg);
 	}
+
+	
 }

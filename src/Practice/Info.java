@@ -1,5 +1,6 @@
 package Practice;
 
+import java.util.Random;
 
 public class Info {
 	private String date;
@@ -44,5 +45,8 @@ public Info() {}
 	}
 	public void setMembercard(String membercard) {
 		Membercard = membercard;
+	}
+	public String toString() {
+		return "신청 날짜 : " + date +"\t"+ " 문의 이메일 : " + MemberEmail;
 	}
 }

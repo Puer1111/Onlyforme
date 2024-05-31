@@ -9,12 +9,11 @@ public class Run {
 
 		View view = new View();
 		Manage msg = new Manage();
-		Info info = new Info();
-
-		end: 
+		
+			end: 
 			while (true) {
+			Info info =view.menu1(); 
 			int menu = view.menu();
-
 			switch (menu) {
 			case 1:
 				view.enquire();
@@ -46,11 +45,16 @@ public class Run {
 				view.control();
 				int num3 = sc.nextInt();
 				if(num3 == 1) {
-					view.control1();
+					info = view.control1();
+					msg.insertenquire(info);
 					view.printMessage("문의 접수 되었습니다.");
+					
 				}
 				break;
 			case 3:
+				Info[] infos = msg.getAllenquires();
+				msg.printAllenquires(infos);
+			case 4:	
 				view.printMessage("종료 되었습니다");
 				break end;
 			default: 
