@@ -1,1 +1,1 @@
-for study 
+to study 
